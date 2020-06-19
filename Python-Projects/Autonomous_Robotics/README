@@ -1,0 +1,7 @@
+This project provides autonomous navigation capabilities to a TurtleBot robot equipped with a feelforce distance sensing device.
+All necessary source navigation scripts are located in the src/ directory
+The launch script is located in the launch/ directory
+The test environment objects are located in the stage/ directory
+Results of multiple navigation attempts given a variety of simulated poses in the provided hospital environment are located in
+the results/ directory
+Build dependancy and configuration information are located in the /config directory
