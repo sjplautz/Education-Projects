@@ -1,1 +1,3 @@
 This program takes two input files representing sparse matrices, represents said matrices as singly linked lists, omitting all zero valued elements to reduce memory consumption, and then performs the specified matrix arithmetic operation on the two provided matrices.
+  All outputs will be directed to /results
+  Exe will be placed in /bin
