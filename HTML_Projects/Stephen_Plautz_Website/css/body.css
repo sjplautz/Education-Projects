@@ -1,0 +1,99 @@
+html {
+    background-image: url("../images/background1.13.jpg"); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+html img{
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+}
+
+body{
+    margin: 0;
+}
+main{
+    width: 65%;
+    margin: auto;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 10px;
+    border-style: outset;
+    border-color: #888888;
+    background-color: rgba(50, 64, 75, .8);
+}
+article h2{
+    font-family: 'Georgia', sans-serif;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    font-size: 1.9em;
+    color: rgb(165, 192, 211);
+}
+article h3{
+    font-family: 'Georgia', sans-serif;
+    letter-spacing: 1px;
+    font-size: 1.4em;
+    color: rgb(165, 192, 211);
+    text-shadow: 0 2px 1px rgba(0,0,0,0.8);
+    padding-left: 10px;
+    margin-bottom: 0px;
+    margin-top: 40px;
+}
+article p{
+    color: rgb(202, 223, 217);
+    text-shadow: 0 2px 1px rgba(0,0,0,0.8);
+    font-family: 'News-Cycle', sans-serif;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    padding: 10px;
+}
+
+#content{
+    margin-top: 450px;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+#body{
+    display: flex;
+}
+#abt-me{
+    width: 100%;
+}
+#abt-me > p > img{
+    display: block;
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 350px;
+    height: 230px;
+}
+
+#college{
+    border-color: rgb(18, 37, 31);
+}
+#webdev{
+    border-color: rgb(18, 37, 31);
+}
+
+#coming-soon{
+    display: block;
+    margin-top: 420px;
+    width: 100%;
+    font-size: 2.2em;
+    color: rgb(142, 207, 201);
+    text-align: center;
+}
+#invisible{
+    display: block;
+    width: 100%;
+    margin-top: 600px;
+    visibility: hidden;
+}
