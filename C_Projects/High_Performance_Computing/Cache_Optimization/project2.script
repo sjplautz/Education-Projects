@@ -1,0 +1,21 @@
+#!/bin/bash -l
+
+#SBATCH -q defq
+
+#SBATCH -N 1
+
+#SBATCH -n 1
+
+$SBATCH --exclude=gpu01
+
+#SBATCH -t 00:15:00
+
+#SBATCH -J project2
+
+#SBATCH -e project2.%j.error
+
+./project2 2048
+./project2 2048 8
+./project2 2048 16
+./project2 2048 32
+./project2 2048 64
