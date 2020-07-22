@@ -1,0 +1,87 @@
+syntax on
+
+
+" -----------STANDARD CONFIGURATIONS:
+
+set noerrorbells                " prevents errors from chiming
+set tabstop=4 softtabstop=4     " sets tab width to 4
+set shiftwidth=4                " sets tab width to 4
+set expandtab                   " inserts tabs as spaces
+set nostartofline               " cursor does not move to start of line
+set smartindent                 " adds auto indentation
+set nowrap                      " begin new line if longer than limit
+set formatoptions-=t            " keeps visual textwidth avoiding newlines
+set textwidth=0 wrapmargin=0    " empties the max textwidth and margin buffers
+set smartcase                   " ignores case in lowercase search applies in
+set incsearch                   " results of /searches show incrementally
+set number relativenumber       " show current line # and relative line #'s
+set showcmd                     " show normal mode commands being typed
+set showmode                    " show the current mode of vim in status bar
+set ruler                       " show cursor position in status bar
+set title                       " show file name in titlebar
+set colorcolumn=100             " set the nowrap collumn limit
+set hlsearch                    " highlight search matches
+
+" -----------STYLING CONFIGURATIONS:
+
+highlight ColorColumn ctermbg=0 guibg=lightgrey
+
+
+" -----------COMMAND MAPPINGS:
+
+" keep the current pasted item in the buffer
+xnoremap p "_dP
+" add a mapping for pasting to the end of a line with an added space 
+noremap ; A <ESC>p
+" maps Q to execute the current line of text in the shell and paste the output
+" to current line
+noremap Q !!sh<CR>
+" maps spacebar to clear seach highlighting
+noremap <Space> :nohlsearch<CR>
+
+" -----------OPTIONS FROM THOUGHTBOT VIDEO:
+
+" turns on the integrated plugin manager
+filetype plugin on
+
+" turns off vi mode
+set nocompatible
+
+" FINDING FILES:
+set path +=**
+set wildmenu
+" USE find <filename> to find files in this fs subtree
+" USE ls to list vim's open files, use b: to go back to an opened file after
+" search
+
+" TAGGING: (ctagintegrateds) 
+" declaring locations to look for tag files
+set tags=./tags,tags;$HOME
+" provides a maketags command to create tags for working directory
+command! MakeTags !ctags -R . 
+" - USE ^] to jump to tag under cursor
+" - USE g^] for ambiguous tags
+" - USE ^t to jump back up the tag stack
+
+" AUTOCOMPLETE: (ins-completion)
+" - USE ^n and ^p to go back and forth in suggestion list
+" - USE ^x^n to list tokens from only THIS file
+" - USE ^x^f to list filename completion, works with any file location, not just
+"   working directory
+" - USE ^x^] to list tags only
+
+" FILE BROWSING: (netrw-browse-maps)
+let g:netrw_banner=0        " disable annoying banner
+let g:netrw_browse_split=4  " open in prior window
+let g:netrw_altv=1          " open splits to the right
+let g:netrw_liststyle=3     " tree view
+let g:netrw_list_hide=netrw_gitignore#Hide()
+let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
+
+" NOW WE CAN:
+" - :edit a folder to open a file browser
+" - <CR>/v/t to open in an h-split/v-split/tab
+" - check |netrw-browse-maps| for more mappings
+
+
+" END OF THOUGHTBOT VIDEO OPTIONS
