@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - binarySearcher",
+            "request": "launch",
+            "mainClass": "binarySearcher"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - QuickSorter",
+            "request": "launch",
+            "mainClass": "QuickSorter"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MergeSorter",
+            "request": "launch",
+            "mainClass": "MergeSorter"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - mergerSorter",
+            "request": "launch",
+            "mainClass": "mergerSorter"
+        }
+    ]
+}
